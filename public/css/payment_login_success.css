@@ -1,0 +1,44 @@
+.panel-body{
+	background: #f9f9f9;
+}
+.login-head{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.login-head li{
+	float: left;
+}
+.login-head li em{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	color: #fff;
+  background: #ff7001;
+	display: inline-block;
+	margin-bottom: 5px;
+	line-height: 30px;
+	font-size: 16px;
+}
+.login-head li p{
+  color: #f16f20;
+}
+.loginh-line{
+	height: 2px;  
+	background: #f16f20;
+	margin-top: 10px;
+}
+.setting-main{
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  padding: 50px 0 60px;
+} 
+.success{
+	text-align: center;
+	font-size: 25px;
+}
+.success h3{
+	font-size: 30px;
+}
+.m-t span{
+	padding: 0 8px;
+}

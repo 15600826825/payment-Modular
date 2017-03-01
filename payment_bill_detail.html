@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>账单详情</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <style type="text/css">
+    .navbar-nav>li>a{
+      border: none;
+    }
+    .navbar-nav>li:first-child a{
+      color: #e86e1e;
+    }
+    .container-bot{
+      background: #e7e1b8;
+      height: 40px;
+    }
+    .container-bot .navbar-text{
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 40px;
+    }
+    .container-top{
+      height: 60px;
+    }
+    .payment-head{
+      padding: 10px 0;
+      background: url(public/img/head-bg.jpg) no-repeat center -46px;
+      margin-bottom: 20px;
+    }
+    .head-portrait{
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: 25%;
+    }
+    .head-portrait img{
+      width: 90px;
+      height: 90px;
+    }
+    .portrait-right p{
+      margin: 15px 0;
+      color: #fff;
+    }
+    .portraitr-greet{
+       font-size: 18px;
+       margin-right: 15px;
+    }
+    .portraitr-border{
+      margin: 0 12px;
+    }
+    .detail-main{
+      background: #fff;
+      padding: 10px 20px;
+    }
+    .detail-main h3{
+      border-bottom: 1px solid #ccc;
+      line-height: 40px;
+    }
+    .detail-main h3 a{
+      float: right;
+      font-size: 14px;
+    }
+    .detail-mtitle{
+      height: 36px;
+      margin: 30px 0 40px;
+    }
+    .detail-mtitle i{
+      font-size: 40px;
+      color: #4ca9ec;
+      margin: 0 15px;
+    }
+    .detail-mtitle span{
+      font-size: 18px;
+    }
+    .detail-mcont{
+      margin-bottom: 40px;
+    }
+    .detail-mcont img{
+      width: 60px;
+      height: 60px;
+    }
+    .detail-mcontimg{
+      margin: 10px 0 0 20px;
+    }
+    .detail-list{
+      background: #fff;
+    }
+    .detail-span{
+      float: right;
+    }
+    .table-bordered>thead>tr>th,.table-bordered>tbody>tr>td{
+      text-align: right;
+    }
+    </style>
+  </head>
+  <body>
+      <section class="animated fadeInRight">    
+        <div class="container">
+        <!-- 主体部分开始 -->
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h3 class="panel-title">账单详情<a class="return" href="javascript:history.go(-1)">返回</a></h3>
+          </div>
+          <div class="panel-body">
+               <div class="detail-main">
+          <h3>我的账单<a href="payment_transaction_record.html">我的账单</a></h3>
+          <div class="detail-mtitle">
+            <i class="fa"></i>
+            <span>交易成功</span>
+          </div>
+          <div class="detail-mcont row">
+            <div class="col-md-1">
+              <img class="detail-mcontimg" src="./billing-details_files/T1TNRiXkRjXXXXXXXX_160X160" alt="">
+            </div>           
+            <div class="col-md-6">
+              <p>转账</p>
+              <p>对方：人在旅途（*青霞）</p>
+              <p>流水号：234567894567897890-</p>
+            </div>           
+          </div>
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <span>时间： 2017-02-15 13:22</span>
+                <span class="detail-span">单位：元</span>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th class="col-md-6 active">订单金额</th>
+                    <th class="col-md-6 active">=实付金额</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>15.00</td>
+                    <td>15.00</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><span>招商银行（8583）</span>15.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> 
+          </div>
+        </div>
+          </div>
+        </div>
+       
+       <!-- 主体部分结束 -->
+      </div>
+      </section>
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  
+
+</body></html>

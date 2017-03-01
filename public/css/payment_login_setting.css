@@ -1,0 +1,60 @@
+.panel-body{
+	background: #f9f9f9;
+}
+.login-head{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.login-head li{
+	float: left;
+}
+.login-head li em{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	color: #fff;
+  background: #ff7001;
+	display: inline-block;
+	margin-bottom: 5px;
+	line-height: 30px;
+	font-size: 16px;
+}
+.login-head li:nth-child(5) em{
+  background: #bfbfbf;
+}
+.login-head li p{
+  color: #f16f20;
+}
+.login-head li:nth-child(5) p{
+  color: #b7b7b7;
+}
+.loginh-line{
+	height: 2px;  
+	background: #b9b9b9;
+	margin-top: 10px;
+}
+.loginh-line:nth-child(2){    
+  background: #f16f20;
+}
+.setting-main{
+  background: #fff;
+  border: 1px solid #e7e7e7;
+} 
+.form-horizontal{
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+.form-horizontal .form-group .btncard-right{
+  padding: 0;
+  margin: 0;
+}
+.btncard{
+  width: 70x;
+  height: 32px;
+  border: 1px solid #e4e4e4;
+  background: #f7f7f7;
+  outline: none;
+}
+.fn-hide{
+  display: none;
+}

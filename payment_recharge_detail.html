@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>账户充值详情</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <style type="text/css">
+      .paycheck-head{
+        padding: 10px 0;
+        border-bottom: 1px solid #d8dad9;
+      }
+      .pay-box{
+        float: left;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+      .pay-money b{
+        color: #598e17;
+      }
+      .paycheck-main{
+        margin-top: 20px;
+      }
+      .paycheckm-bank{
+        width: 190px;
+        height: 38px;
+        border: 1px solid #ddd;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 38px;
+      }
+      .bank-logo{
+        width: 126px;
+        padding: 0;
+        background: url(public/img/zhaoshangall.png) no-repeat 5px center;
+        background-size: 80px 20px;
+        display: inline-block;
+        height: 38px;
+        float: left;
+      }
+      .form-group .control-label .security{
+        color: #26bc00;
+        font-size: 16px;
+      }
+      .paycheckm-pwd{
+        width: 180px;
+        cursor: text;
+        background: #fff;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        padding: 10px 0;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        margin-right: 8px;
+      }
+      .pwd-num{
+        width: 29px;
+        float: left;
+        display: block;
+        padding: 4px 0;
+        height: 14px;
+        border-left: 1px solid #cccccc;
+      }
+      .pwd-num:first-child{
+        border-left: none;
+      }
+      .pwd-num b{
+        display: block;
+        margin: 0 auto;
+        width: 7px;
+        height: 7px;
+        background: url(public/img/dot.png) no-repeat center;
+        overflow: hidden;
+        display: none;
+      }
+      .active{
+        border: 1px solid red;
+      }
+      .form-group{
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+      <section class="animated fadeInRight">    
+        <div class="container">
+        <!-- 主体部分开始 -->
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h3 class="panel-title">账户充值<a class="return" href="javascript:history.go(-1)">返回</a></h3>
+          </div>
+          <div class="panel-body">
+            <div class="paycheck-head">
+              <div class="pay-box"><span class="">充值到<b>余额</b></span></div>
+              <span class="pay-money"><b>1000.00</b>元</span>
+            </div>
+            <div class="paycheck-main">
+              <form action="" method="post" id="" class="form-horizontal" role="form">
+                <div class="form-group">
+                  <label for="" class="control-label col-md-2">充值方式</label>
+                  <div class="paycheckm-bank col-md-4">
+                    <span class="bank-logo"></span>
+                    <span class="">**8385</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label col-md-2">充值金额</label>
+                  <div class="col-md-2">
+                     <input type="text" name="" id="" class="form-control" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label col-md-offset-2 "><i class="fa security">&#xf058;</i>你在安全的环境中，请放心使用！</label>
+                </div>
+                <div class="form-group">
+                  <label for="" class="control-label col-md-2">支付宝密码</label>
+                  <div class="paycheckm-pwd col-md-4">
+                     <i class="pwd-num"><b></b></i>
+                     <i class="pwd-num"><b></b></i>
+                     <i class="pwd-num"><b></b></i>
+                     <i class="pwd-num"><b></b></i>
+                     <i class="pwd-num"><b></b></i>
+                     <i class="pwd-num"><b></b></i>
+                  </div>
+                  <label for="" class="control-label"><a href="">忘记密码？</a></label>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-offset-2 col-md-2">
+                    <button type="submit" id="btnSubmit" class="btn btn-info btn-block">确认充值</button>
+                  </div>    
+                </div>
+              </form>  
+            </div>
+          </div>
+        </div>
+        <!-- 主体部分结束 -->
+      </div>
+    </section>  
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.min.js"></script> 
+  <script>
+    // $('.pwd-num').on('click',function(){
+    //   $(this).addClass('active').sibilings('i').removeClass('active')
+    // })
+  </script>
+  </body>
+</html>

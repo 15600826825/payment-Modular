@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发送邮件</title>
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/font-awesome.min.css">
+  <link rel="stylesheet" href="public/css/main.css">
+  <style>
+    	.panel-body{
+      background: #f9f9f9;
+    }
+    .bind-head{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .bind-head li{
+      float: left;
+    }
+    .bind-head li em{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: #fff;
+      background: #ff7001;
+      display: inline-block;
+      margin-bottom: 5px;
+      line-height: 30px;
+      font-size: 16px;
+    }
+    .bind-head li:nth-child(5) em{
+      background: #bfbfbf;
+    }
+    .bind-head li p{
+      color: #f16f20;
+    }
+    .bind-head li:nth-child(5) p{
+      color: #b7b7b7;
+    }
+    .bindh-line{
+      height: 2px;  
+      background: #b9b9b9;
+      margin-top: 10px;
+    }
+    .bindh-line:nth-child(2){    
+      background: #f16f20;
+    }
+		.bind-main{
+			background: #fff;
+      padding: 80px 40px;
+		}	
+		.success{
+      text-align: center;
+      font-size: 18px;
+    }
+    .success p i{
+      font-size: 28px;
+      color: #08c;
+    }
+    .emilnum{
+      font-size: 20px;
+      color: #ff7001;
+    }
+    .success h3{
+      font-size: 30px;
+    }
+    .m-t span{
+      padding: 0 8px;
+    }
+  </style>
+</head>
+<body>
+		<section class="animated fadeInRight">    
+      <div class="container">
+					<!-- 头部开始 -->
+					<div class="panel panel-success">
+	          <div class="panel-heading">
+	            <h2 class="panel-title">绑定邮箱<a class="return" href="javascript:history.go(-1)">返回</a></h2>
+	          </div>
+          	<div class="panel-body">
+          		<!-- 头部开始-->
+	          	<div class="row">
+							 	<ul class="bind-head col-md-offset-1 col-md-10">
+	                <li class="text-center">
+	                  <em>1</em>
+	                  <p>验证身份</p>
+	                </li>
+	                <li class="bindh-line col-md-4">
+	                  <span></span>
+	                </li>
+	                <li class="text-center">
+	                  <em>2</em>
+	                  <p>添加邮箱</p>
+	                </li>
+	                <li class="bindh-line col-md-4">
+	                  <span></span>
+	                </li>
+	                <li class="text-center">
+	                  <em>3</em>
+	                  <p>添加成功</p>
+	                </li>
+	              </ul>
+              </div>
+              <!-- 头部结束-->
+              <!-- 主体部分开始 -->
+							<div class="bind-main"> 
+                <div class="success">
+                   <p><i class="fa">&#xf0e0;</i>邮件已发送到您的邮箱<span class="emilnum">111111@163.com</span>。请按邮件中的提示操作，完成添加。</p>
+                    <p class="m-t">
+                    <span id="count">5</span>秒后自动跳转到
+                    <a href="payment_account_info.html">个人信息页面</a>
+                  </p>
+                </div>
+							</div>
+							<!-- 主体部分结束 -->         
+          	</div>
+        	</div>
+ 			</div>
+    </section> 
+	<script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script>
+      $(function(){
+      //倒计时 自动跳转到指定页
+    var countDown = function($target, router, count){
+      var count = count || 5;
+      var timer;
+      timer = setInterval(function() {
+          if (count === 0) {
+            clearInterval(timer);
+            window.location.href = router;
+          } else {
+            count--;
+            $target.text(count)
+          }
+        }, 1000)
+    }
+      countDown($('#count'), '/signin', 5)
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绑定邮箱</title>
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/font-awesome.min.css">
+  <link rel="stylesheet" href="public/css/main.css">
+  <style>
+    	.panel-body{
+      background: #f9f9f9;
+    }
+    .bind-head{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .bind-head li{
+      float: left;
+    }
+    .bind-head li em{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: #fff;
+      background: #ff7001;
+      display: inline-block;
+      margin-bottom: 5px;
+      line-height: 30px;
+      font-size: 16px;
+    }
+    .bind-head li:nth-child(5) em{
+      background: #bfbfbf;
+    }
+    .bind-head li p{
+      color: #f16f20;
+    }
+    .bind-head li:nth-child(5) p{
+      color: #b7b7b7;
+    }
+    .bindh-line{
+      height: 2px;  
+      background: #b9b9b9;
+      margin-top: 10px;
+    }
+    .bindh-line:nth-child(2){    
+      background: #f16f20;
+    }
+		.bind-main{
+			background: #fff;
+      padding: 20px 40px 40px;
+		}	
+		.bindm-head{
+			background: #e5f5ff;
+			border: 1px solid #c9d5e2;
+			padding: 0 20px;
+      height: 36px;
+      line-height: 36px;
+			margin: 0 30px;
+		}	
+		.bindm-head p .fa{
+			margin-right: 10px;
+			font-size: 20px;
+			color: #3995d8;
+		}
+		.form-horizontal{
+			margin-top: 50px;
+		}
+		.bind-title{
+			font-size: 16px;
+			color: #ed6c00;
+		}
+		.bind-title span{
+			color: #999;
+			font-size: 14px;
+			margin-left: 10px;
+		}
+		.bind-title .bind-tspan{
+			color: #ed6c00;
+		}
+    .btncard{
+      background: #f2f2f2;
+      border: 1px solid #b3b3b3;
+      margin-top: 7px;
+    }
+    .form-group{
+      margin-bottom: 30px;
+    }
+    .account{
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+		<section class="animated fadeInRight">    
+      <div class="container">
+					<!-- 头部开始 -->
+					<div class="panel panel-success">
+	          <div class="panel-heading">
+	            <h2 class="panel-title">绑定邮箱<a class="return" href="javascript:history.go(-1)">返回</a></h2>
+	          </div>
+          	<div class="panel-body">
+          		<!-- 头部开始-->
+	          	<div class="row">
+							 	<ul class="bind-head col-md-offset-1 col-md-10">
+	                <li class="text-center">
+	                  <em>1</em>
+	                  <p>验证身份</p>
+	                </li>
+	                <li class="bindh-line col-md-4">
+	                  <span></span>
+	                </li>
+	                <li class="text-center">
+	                  <em>2</em>
+	                  <p>添加邮箱</p>
+	                </li>
+	                <li class="bindh-line col-md-4">
+	                  <span></span>
+	                </li>
+	                <li class="text-center">
+	                  <em>3</em>
+	                  <p>添加成功</p>
+	                </li>
+	              </ul>
+              </div>
+              <!-- 头部结束-->
+              <!-- 主体部分开始 -->
+							<div class="bind-main">
+								<div class="bindm-head">
+									<p><i class="fa">&#xf06a;</i>请确保您输入的的邮箱能正常接收激活邮件，邮箱才能生效。</p>
+								</div>
+    						<form action="" method="post" id="addemilForm" class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="" class="control-label col-md-offset-2 col-md-2">手机号码</label>
+                    <label for="" class="control-label col-md-1 account">183****1234</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label col-md-offset-2 col-md-2">邮箱</label>
+                    <div class="col-md-3 form-item">
+                      <input type="text" value="" class="form-control" id="emilCode">
+                      <i class="fa fa-check-circle"></i>
+                    </div>
+                    <div class="col-md-3 input-tip alert"></div>
+                  </div>
+                  <div class="form-group submit">
+                    <div class="col-md-offset-4 col-md-2">
+                      <button type="submit" id="addemilSubmit" class="btn btn-warning btn-block">下一步</button>
+                    </div>
+                  </div>      
+                </form> 
+							</div>
+							<!-- 主体部分结束 -->         
+          	</div>
+        	</div>
+ 			</div>
+    </section> 
+	<script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/js/common.js"></script>
+  <script>
+    const addemilForm = $('#addemilForm'),
+          emilCode = $('#emilCode'),
+          addemilSubmit = $('#addemilSubmit');
+    //验证规则      
+    const regular = {
+      emilcode: /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/ 
+    }
+    //提示信息    
+    const msg = {
+      emilcode: {
+        tip: '请输入真实的邮箱号码',
+        required: '邮箱号码不能为空',
+        regular: '邮箱格式不正确'
+      }
+    }
+    //表单提交事件  
+    addemilSubmit.on('click', function(e){
+      e.preventDefault()
+      checkInput(emilCode, msg.emilcode, regular.emilcode) &&
+      // alert('表单提交')
+      addemilForm.submit()
+    })
+    checkRealTime(emilCode, msg.emilcode, regular.emilcode, checkInput)
+
+  </script>
+</body>
+</html>

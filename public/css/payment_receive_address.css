@@ -1,0 +1,18 @@
+.panel-body{
+	padding: 20px 30px;
+}
+.bank-head{
+	height: 36px;
+	border: 1px solid #c9d5e2;
+	line-height: 36px;
+	background: #e5f5ff;
+	padding: 0 20px;
+}
+.bank-head i{
+	font-size: 20px;
+	color: #0483cf;
+	margin-right: 8px;
+}
+.form-horizontal{
+	padding-top: 30px;
+}

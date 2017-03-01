@@ -1,0 +1,62 @@
+.panel-body{
+  background: #f9f9f9;
+}
+.login-head{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.login-head li{
+  float: left;
+}
+.login-head li:first-child em{
+  background: #ff7001;
+}
+.login-head li:first-child p{
+  color: #ff7001;
+}
+.login-head li em{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #bfbfbf;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 5px;
+  line-height: 30px;
+  font-size: 16px;
+}
+.loginh-line{
+  height: 2px;  
+  background: #b9b9b9;
+  margin-top: 10px;
+}
+.login-main{
+  background: #fff;
+  padding-top: 20px;
+} 
+.loginm-head{
+  background: #e5f5ff;
+  border: 1px solid #c9d5e2;
+  padding: 10px 20px;
+  margin: 0 30px;
+} 
+.loginm-head p .fa{
+  margin-right: 10px;
+  font-size: 20px;
+  color: #3995d8;
+}
+.form-horizontal{
+  margin-top: 50px;
+}
+.login-title{
+  font-size: 16px;
+  color: #ed6c00;
+}
+.login-title span{
+  color: #999;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.login-title .login-tspan{
+  color: #ed6c00;
+}

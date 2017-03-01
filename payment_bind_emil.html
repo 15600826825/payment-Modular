@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绑定邮箱</title>
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/font-awesome.min.css">
+  <link rel="stylesheet" href="public/css/main.css">
+  <style>
+	  .panel-body{
+	  	background: #f9f9f9;
+	  }
+  	.bind-head{
+  		padding-top: 40px;
+  		padding-bottom: 40px;
+  	}
+		.bind-head li{
+			float: left;
+		}
+		.bind-head li:first-child em{
+			background: #ff7001;
+		}
+		.bind-head li:first-child p{
+			color: #ff7001;
+		}
+		.bind-head li em{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #bfbfbf;
+			color: #fff;
+			display: inline-block;
+			margin-bottom: 5px;
+			line-height: 30px;
+			font-size: 16px;
+		}
+		.bindh-line{
+			height: 2px;  
+			background: #b9b9b9;
+			margin-top: 10px;
+		}
+		.bind-main{
+			background: #fff;
+      padding: 20px 40px 40px;
+		}	
+		.bindm-head{
+			background: #e5f5ff;
+			border: 1px solid #c9d5e2;
+			padding: 0 20px;
+      height: 36px;
+      line-height: 36px;
+			margin: 0 30px;
+		}	
+		.bindm-head p .fa{
+			margin-right: 10px;
+			font-size: 20px;
+			color: #3995d8;
+		}
+    .bindm-head p span{
+      color: #fd7d23;
+      margin: 0 5px;
+      font-size: 16px;
+    }
+		.form-horizontal{
+			margin-top: 50px;
+		}
+		.bind-title{
+			font-size: 16px;
+			color: #ed6c00;
+		}
+		.bind-title span{
+			color: #999;
+			font-size: 14px;
+			margin-left: 10px;
+		}
+		.bind-title .bind-tspan{
+			color: #ed6c00;
+		}
+    .btncard{
+      background: #f2f2f2;
+      border: 1px solid #b3b3b3;
+      margin-top: 7px;
+    }
+    .form-group{
+      margin-bottom: 30px;
+    }
+    .account{
+      letter-spacing: 1px;
+    }
+    /*.form-horizontal .form-group .text-left{
+      text-align: left;
+    }*/
+    .message{
+      float: left;
+      padding-top: 10px;
+      color: #0088cc;
+    }
+    .form-item{
+      position: relative;
+    }
+    .tipshow{
+      z-index: 99;
+      position: absolute;
+      left: 180px;
+      top: 36px;
+      display: block;
+      width: 400px;
+      border: 1px solid #B9C8D3;
+      border-radius: 2px;
+      padding: 5px 22px 5px 10px;
+      background-color: #f8fcff;
+    }
+    .poptip-shadow .list li{
+     font-size: 12px;
+     padding-top: 6px;
+    }
+    .fn-hide{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+		<section class="animated fadeInRight">    
+      <div class="container">
+					<!-- 头部开始 -->
+					<div class="panel panel-success">
+	          <div class="panel-heading">
+	            <h2 class="panel-title">绑定邮箱<a class="return" href="javascript:history.go(-1)">返回</a></h2>
+	          </div>
+          	<div class="panel-body">
+          		<!-- 头部开始-->
+	          	<div class="row">
+							 	<ul class="bind-head col-md-offset-1 col-md-10">
+	                <li class="text-center">
+	                  <em>1</em>
+	                  <p>验证身份</p>
+	                </li>
+	                <li class="bindh-line col-md-4">
+	                  <span></span>
+	                </li>
+	                <li class="text-center">
+	                  <em>2</em>
+	                  <p>添加邮箱</p>
+	                </li>
+	                <li class="bindh-line col-md-4">
+	                  <span></span>
+	                </li>
+	                <li class="text-center">
+	                  <em>3</em>
+	                  <p>添加成功</p>
+	                </li>
+	              </ul>
+              </div>
+              <!-- 头部结束-->
+              <!-- 主体部分开始 -->
+							<div class="bind-main">
+								<div class="bindm-head">
+									<p><i class="fa">&#xf06a;</i>您正在使用<span>验证短信</span>进行校验。</p>
+								</div>
+    						<form action="" method="post" id="bindForm" class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="" class="control-label col-md-offset-2 col-md-2">手机号码</label>
+                    <label for="" class="control-label col-md-1 account">183****1234</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label col-md-offset-2 col-md-2">校验码</label>
+                    <div class="col-md-1 btn-card">
+                      <input type="button" value="点此免费获取" class="btncard" id="">
+                    </div>
+                    <div class="col-md-2 form-item fn-hide">
+                      <input type="text" value="" class="form-control" id="messageCode" placeholder="6位数字">
+                      <i class="fa fa-check-circle"></i>
+                      <span  class="message">没收到短信验证码？</span>
+                      <div class="tipshow fn-hide">
+                        <div class="poptip-shadow">
+                          <ul class="list">
+                            <li><i class="fa">&#xf0da;</i>网络通讯异常可能会造成短信丢失，请重新获取或稍后再试。</li>
+                            <li class="list-btn"><input type="button" value="重新获取校验码"></li>
+                            <li><i class="fa">&#xf0da;</i>请核实手机是否已欠费停机，或者屏蔽了系统短信。</li>
+                            <li><i class="fa">&#xf0da;</i>如果手机183****6275已丢失或停用，请选择其他验证方式</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 input-tip alert"></div>
+                  </div>
+                  <div class="form-group submit">
+                    <div class="col-md-offset-4 col-md-2">
+                      <button type="submit" id="bindPasswd" class="btn btn-warning btn-block">下一步</button>
+                    </div>
+                  </div>      
+                </form> 
+							</div>
+							<!-- 主体部分结束 -->         
+          	</div>
+        	</div>
+ 			</div>
+    </section> 
+	<script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/js/common.js"></script>
+  <script>
+    var a = false;
+    $('.message').on('click',function(){
+      if(!a){
+         $('.tipshow').removeClass('fn-hide')
+         a = true
+      }else{
+         $('.tipshow').addClass('fn-hide')
+         a = false
+      }
+    })
+    $('.btn-card').on('click',function(){
+        $(this).addClass('fn-hide')
+        $('.form-item').removeClass('fn-hide')
+    })
+    const bindForm = $('#bindForm'),
+          messageCode = $('#messageCode'),
+          bindPasswd = $('#bindPasswd');
+    //验证规则      
+    const regular = {
+      messagecode: /^\d{6}$/
+    }
+    //提示信息    
+    const msg = {
+      messagecode: {
+        tip: '请输入6位数字校验码',
+        required: '请输入校验码',
+        regular: '校验码格式不正确'
+      }
+    }
+    //表单提交事件  
+    bindPasswd.on('click', function(e){
+      e.preventDefault()
+      checkInput(messageCode, msg.messagecode, regular.messagecode) &&
+      // alert('表单提交')
+      bindForm.submit()
+    })
+    checkRealTime(messageCode, msg.messagecode, regular.messagecode, checkInput)
+
+  </script>
+</body>
+</html>

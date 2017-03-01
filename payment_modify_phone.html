@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改手机号</title>
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/font-awesome.min.css">
+  <link rel="stylesheet" href="public/css/main.css">
+  <link rel="stylesheet" href="public/css/cityLayout.css">
+  <style>
+	  .panel-body{
+	  	background: #f9f9f9;
+	  }
+  	.bind-head{
+  		padding-top: 40px;
+  		padding-bottom: 40px;
+  	}
+		.bind-head li{
+			float: left;
+		}
+		.bind-head li:first-child em{
+			background: #ff7001;
+		}
+		.bind-head li:first-child p{
+			color: #ff7001;
+		}
+		.bind-head li em{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #bfbfbf;
+			color: #fff;
+			display: inline-block;
+			margin-bottom: 5px;
+			line-height: 30px;
+			font-size: 16px;
+		}
+		.bindh-line{
+			height: 2px;  
+			background: #b9b9b9;
+			margin-top: 10px;
+		}
+		.bind-main{
+			background: #fff;
+      padding-top: 20px;
+		}	
+		.bindm-head{
+			background: #e5f5ff;
+			border: 1px solid #c9d5e2;
+			padding: 0 20px;
+      height: 36px;
+      line-height: 36px;
+			margin: 0 30px;
+		}	
+		.bindm-head p .fa{
+			margin-right: 10px;
+			font-size: 20px;
+			color: #3995d8;
+		}
+		.form-horizontal{
+			margin-top: 50px;
+		}
+		.bind-title{
+			font-size: 16px;
+			color: #ed6c00;
+		}
+		.bind-title span{
+			color: #999;
+			font-size: 14px;
+			margin-left: 10px;
+		}
+		.bind-title .bind-tspan{
+			color: #ed6c00;
+		}
+    .btn-default{
+      color: #fff;
+      cursor: default;
+      font-size: 12px;
+      background-color: #999; 
+    }
+  </style>
+</head>
+<body>
+		<section class="animated fadeInRight">    
+      <div class="container">
+					<!-- 头部开始 -->
+					<div class="panel panel-success">
+	          <div class="panel-heading">
+	            <h2 class="panel-title">修改手机号码<a class="return" href="javascript:history.go(-1)">返回</a></h2>
+	          </div>
+          	<div class="panel-body">
+          		<!-- 头部开始-->
+	          	<div class="row">
+							 	<ul class="bind-head col-md-offset-1 col-md-10">
+	                <li class="text-center">
+	                  <em>1</em>
+	                  <p>输入新手机号</p>
+	                </li>
+	                <li class="bindh-line col-md-4">
+	                  <span></span>
+	                </li>
+	                <li class="text-center">
+	                  <em>2</em>
+	                  <p>选择并验证身份</p>
+	                </li>
+	                <li class="bindh-line col-md-4">
+	                  <span></span>
+	                </li>
+	                <li class="text-center">
+	                  <em>3</em>
+	                  <p>绑定成功</p>
+	                </li>
+	              </ul>
+              </div>
+              <!-- 头部结束-->
+              <!-- 主体部分开始 -->
+							<div class="bind-main">
+								<div class="bindm-head">
+									<p><i class="fa">&#xf06a;</i>1 个手机号最多只能被 1 个账号用作登录名</p>
+								</div>
+    						<form action="" method="post" id="" class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="" class="control-label col-md-offset-2 col-md-2">新手机号码</label>
+                    <div class="col-md-1">
+                      <input type="text" name="" id="" class="form-control" placeholder="">
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text" name="" id="" class="form-control" placeholder="请输入新手机号码">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label col-md-offset-2 col-md-2">校验码</label>
+                    <div class="col-md-2">
+                      <input type="text" name="" id="" class="form-control" placeholder="请输入校验码">
+                    </div>
+                    <div class="col-md-1">
+                      <button type="button" class="btn btn-default">获取校验码</button>
+                    </div>
+                  </div>                  
+                  <div class="form-group submit">
+                    <div class="col-md-offset-4 col-md-1">
+                      <button type="submit" id="btnFindPasswd" class="btn btn-warning btn-block">确定</button>
+                    </div>
+                  </div>                    
+                </form> 
+							</div>
+							<!-- 主体部分结束 -->         
+          	</div>
+        	</div>
+ 			</div>
+    </section>
+     <!--弹出省省市-->
+      <div class="provinceCityAll">
+        <div class="tabs clearfix">
+          <ul>
+            <li><a href="javascript:" class="current" tb="hotCityAll">热门城市</a></li>
+            <li><a href="javascript:"  tb="provinceAll">省份</a></li>
+            <li><a href="javascript:" tb="cityAll" id="cityAll">城市</a></li>
+            <li><a href="javascript:" tb="countyAll" id="countyAll">区县</a></li>
+          </ul>
+        </div>                             
+        <div class="con">
+          <div class="hotCityAll invis">
+            <div class="pre"><a></a></div>
+            <div class="list">
+              <ul></ul>
+            </div>
+            <div class="next"><a class="can"></a></div>
+          </div>
+          <div class="provinceAll invis">
+            <div class="pre"><a></a></div>
+            <div class="list">
+              <ul></ul>
+            </div>
+            <div class="next"><a class="can"></a></div>
+          </div>
+          <div class="cityAll invis">
+            <div class="pre"><a></a></div>
+            <div class="list">
+              <ul></ul>
+            </div>
+            <div class="next"><a class="can"></a></div>
+          </div>
+          <div class="countyAll invis">
+            <div class="pre"><a></a></div>
+            <div class="list">
+              <ul></ul>
+            </div>
+            <div class="next"><a class="can"></a></div>
+          </div>
+        </div>
+      </div>  
+	<script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/plugins/laydate/laydate.js"></script>
+  <script src="public/js/public.js"></script>  
+  <script>
+  	// 时间选择器
+  	laydate({elem: '#validity', max: laydate.now(-1)});
+  </script>
+</body>
+</html>
